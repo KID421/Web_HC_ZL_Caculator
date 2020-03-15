@@ -44,7 +44,11 @@ function show(content) {
 
     // 取得最後一個字
     var last = final[final.length - 1];
-    console.log(last);
+
+    // 邏輯運算子 || 或者
+    if (last == "+" || last == "-" || last == "*" || last == "/")
+        if (content == "+" || content == "-" || content == "*" || content == "/")
+            return;
 
     // 最終數字 += 參數-內容
     final += content;
