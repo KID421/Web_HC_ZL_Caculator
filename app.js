@@ -2,6 +2,8 @@
 var result = document.getElementById("result");
 // 取得按鈕：0-9 +-*/
 var btns = document.getElementsByClassName("btn");
+// 最終數字
+var final = "";
 
 // var 在 function 內使用
 // let 在 { } 內使用
@@ -16,6 +18,9 @@ for (let i = 0; i < btns.length; i++) {
 
 // 函式 顯示(參數-內容)
 function show(content) {
-    // 結果元素.內容 = 參數-內容
-    result.innerHTML = content;
+    // 最終數字 += 參數-內容
+    final += content;
+    // 結果元素.內容 = 最終數字
+    result.innerHTML = final;
 }
+
