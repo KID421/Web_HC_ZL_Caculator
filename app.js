@@ -5,6 +5,16 @@ var btns = document.getElementsByClassName("btn");
 // 最終數字
 var final = "";
 
+// 等於按鈕
+var equalBtn = document.getElementById("equal");
+// 監聽器(""，等於)
+equalBtn.addEventListener("click", equal);
+
+function equal() {
+    // eval 運算字串
+    result.innerHTML = eval(final);
+}
+
 // var 在 function 內使用
 // let 在 { } 內使用
 for (let i = 0; i < btns.length; i++) {
@@ -23,4 +33,3 @@ function show(content) {
     // 結果元素.內容 = 最終數字
     result.innerHTML = final;
 }
-
