@@ -15,6 +15,9 @@ function equal() {
     // 如果 最終數字 等於 "" 就 跳出
     if (final == "") return;
 
+    var last = final[final.length - 1];
+    if (last == "+" || last == "-" || last == "*" || last == "/") return;
+    
     // eval 運算字串
     result.innerHTML = eval(final);
     // 清空
@@ -54,4 +57,13 @@ function show(content) {
     final += content;
     // 結果元素.內容 = 最終數字
     result.innerHTML = final;
+}
+
+// 清除
+var clearBtn = document.getElementById("clear");
+clearBtn.addEventListener("click", clear);
+
+function clear() {
+    final = "";
+    result.innerHTML = "0";
 }
