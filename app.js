@@ -34,6 +34,14 @@ for (let i = 0; i < btns.length; i++) {
 
 // 函式 顯示(參數-內容)
 function show(content) {
+
+    // 處理尚未輸入數字
+    if (final == "") {
+        if (content == "0") return;
+        if (content == "*") return;
+        if (content == "/") return;
+    }
+
     // 最終數字 += 參數-內容
     final += content;
     // 結果元素.內容 = 最終數字
