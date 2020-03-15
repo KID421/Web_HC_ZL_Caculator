@@ -11,8 +11,14 @@ var equalBtn = document.getElementById("equal");
 equalBtn.addEventListener("click", equal);
 
 function equal() {
+
+    // 如果 最終數字 等於 "" 就 跳出
+    if (final == "") return;
+
     // eval 運算字串
     result.innerHTML = eval(final);
+    // 清空
+    final = "";
 }
 
 // var 在 function 內使用
